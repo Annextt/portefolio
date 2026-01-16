@@ -342,7 +342,6 @@ const App = {
     ProjectsInteraction.init();
     ActiveMenuLink.init();
     HeaderScroll.init();
-    FormHandler.init();
     MicroInteractions.init();
     LazyLoad.init();
 
