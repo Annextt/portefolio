@@ -1,0 +1,366 @@
+/* ==========================================================================
+   CONTAINER DO BOTÃO
+   ========================================================================== */
+#toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  
+  width: 120px;
+  height: 180px;
+  padding: 0;
+  
+  background: transparent;
+  border: none;
+  
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  touch-action: none;
+  
+  transition: transform 0.2s ease;
+  
+  margin: 0;
+}
+
+#toggle-theme:active {
+  cursor: grabbing;
+}
+
+#toggle-theme:focus-visible {
+  outline: 3px solid #6c5ce7;
+  outline-offset: 5px;
+  border-radius: 10px;
+}
+
+body.light-theme #toggle-theme:focus-visible {
+  outline-color: #2c3e50;
+}
+
+/* ==========================================================================
+   SVG 
+   ========================================================================== */
+.lightbulb-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible; 
+  
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  
+  pointer-events: none;
+  
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+body.light-theme .lightbulb-svg {
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* ==========================================================================
+   TRANSIÇÕES
+   ========================================================================== */
+
+#bulb-glass,
+#bulb-glow,
+#filament,
+#filament path {
+  transition: all 0.4s ease;
+}
+
+#bulb-group {
+  transition: transform 0.05s ease-out;
+  transform-origin: 50px 105px; /* Ponto de rotação na base */
+  will-change: transform; /* Otimização de performance */
+}
+
+/* Corda  */
+#rope-path {
+ 
+  stroke-linejoin: round;
+  will-change: d; 
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+  transition: stroke 0.3s ease; /* Só cor muda suave */
+}
+
+
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+#toggle-theme:hover .lightbulb-svg {
+  transform: scale(1.05);
+}
+
+#toggle-theme:active .lightbulb-svg {
+  transform: scale(0.98);
+}
+
+#toggle-theme:hover #pull-handle-group {
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+#toggle-theme:hover #pull-handle {
+  rx: 7;
+  ry: 6;
+  fill: #9a7d5f;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE SHAKE (ao trocar tema)
+   ========================================================================== */
+@keyframes bulb-shake {
+  0%, 100% { 
+    transform: rotate(0deg); 
+  }
+  25% { 
+    transform: rotate(-3deg) scale(1.02); 
+  }
+  50% { 
+    transform: rotate(3deg) scale(0.98); 
+  }
+  75% { 
+    transform: rotate(-2deg) scale(1.01); 
+  }
+}
+
+@keyframes bulb-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  60% {
+    transform: translateY(5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#toggle-theme {
+  animation: bulb-entrance 0.6s ease-out;
+}
+
+/* ==========================================================================
+   TEMA CLARO 
+   ========================================================================== */
+
+/* Corda mais escura */
+body.light-theme #rope-path {
+  stroke: #6b5644;
+}
+
+/* Puxador mais escuro */
+body.light-theme #pull-handle {
+  fill: #7a5c3d;
+}
+
+/* Base da lâmpada levemente mais escura */
+body.light-theme #bulb-base rect {
+  filter: brightness(0.9);
+}
+
+body.light-theme #bulb-base circle {
+  fill: #2a2a2a;
+}
+
+/* Vidro com melhor contraste */
+body.light-theme #bulb-glass {
+  stroke: #999;
+  stroke-width: 2;
+}
+
+/* ==========================================================================
+  AJUSTE DO BOTÃO DE IDIOMA
+   ========================================================================== */
+
+#languageToggle {
+    position: fixed;
+    top: 20px;
+    right: 180px;
+    background: rgba(108, 92, 231, 0.1);
+    border: 2px solid rgba(108, 92, 231, 0.3);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    font-weight: 600;
+    z-index: 10000;
+}
+
+#languageToggle:hover {
+    background: rgba(108, 92, 231, 0.2);
+    border-color: rgba(108, 92, 231, 0.5);
+    transform: translateY(-2px);
+}
+
+#languageToggle:active {
+    transform: translateY(0);
+}
+
+.flag-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.lang-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    #languageToggle {
+        right: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    body #languageToggle {
+        top: 100px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body #languageToggle {
+        top: 95px !important;
+        left: 15px !important;
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    #languageToggle .flag-icon {
+        font-size: 1rem !important;
+    }
+    
+    #languageToggle .lang-text {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    body #languageToggle {
+        top: 90px !important;
+        left: 10px !important;
+        padding: 0.35rem 0.7rem !important;
+    }
+}
+
+/* ==========================================================================
+   ESTADOS ESPECIAIS
+   ========================================================================== */
+
+.light-theme #languageToggle {
+    background: #6366f1;
+    border-color: rgba(0, 0, 0, 0.4);
+    color: #e6e6e6;
+}
+
+.light-theme #languageToggle:hover {
+    background: #6366f1;
+    border-color: rgba(108, 92, 231, 0.6);
+}
+
+#languageToggle:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+@media print {
+    #languageToggle {
+        display: none !important;
+    }
+}
+
+
+/* ==========================================================================
+   RESPONSIVE - LÂMPADs
+   ========================================================================== */
+  
+  
+#toggle-theme {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  width: 64px;          
+  height: auto;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  #toggle-theme {
+    width: 56px;
+    right: 70px;
+  }
+}
+
+@media (max-width: 360px) {
+  #toggle-theme {
+    width: 50px;
+    right: 70px;
+  }
+}
+
+/* ==========================================================================
+    REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  #toggle-theme,
+  .lightbulb-svg,
+  #bulb-glass,
+  #bulb-glow,
+  #filament,
+  #bulb-group,
+  #pull-handle-group,
+  #pull-handle {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  #toggle-theme {
+    animation: none !important;
+  }
+  
+  #toggle-theme:hover .lightbulb-svg,
+  #toggle-theme:active .lightbulb-svg {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================================================== */
+
+#toggle-theme:not(:hover) #bulb-group,
+#toggle-theme:not(:hover) #rope-path,
+#toggle-theme:not(:hover) #pull-handle-group {
+  will-change: auto;
+}
+
+#bulb-group,
+#rope-path,
+#pull-handle-group {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+@media print {
+  #toggle-theme {
+    display: none !important;
+  }
+}
+
+
+

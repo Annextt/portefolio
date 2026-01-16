@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de David Nakahara - Desenvolvedor Web & Designer UX especializado em criar experiências digitais inovadoras">
+    <meta name="keywords" content="desenvolvedor web, designer ux, react, nodejs, portfolio">
+    <title>David Nakahara - Desenvolvedor Web & Designer UX</title>
+
+    <!-- Styles -->
+    <link rel="icon" href="assets/images/dd.ico">
+    <link rel="apple-touch-icon" href="assets/images/dd-180.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/light.css"
+    
+</head>
+<body>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+
+<button id="toggle-theme" aria-label="Alternar tema claro/escuro">
+    <i class="fas fa-moon"></i>
+</button>
+
+
+<header id="header">
+    <div class="container">
+        <h1>David.dev</h1>
+        <nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#sobre" class="nav-link" data-translate="nav-about">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link" data-translate="nav-services">Serviços</a></li>
+                <li><a href="#solucoes" class="nav-link" data-translate="nav-solutions">Soluções</a></li>
+                <li><a href="#projetos" class="nav-link" data-translate="nav-projects">Projetos</a></li>
+                <li><a href="#habilidades" class="nav-link" data-translate="nav-skills">Habilidades</a></li>
+                <li><a href="#contato" class="nav-link" data-translate="nav-contact">Contato</a></li>
+            </ul>
+            <a class="botao" href="#contato" data-translate="btn-hire">Contrate-me</a>
+        </nav>
+    </div>
+
+        <button id="languageToggle" class="language-toggle" aria-label="Alternar idioma">
+                    <span class="flag-icon">🇧🇷</span>
+                    <span class="lang-text">PT</span>
+                </button>
+</header>
+
+<!-- Seção Sobre / Intro -->
+<section id="sobre" class="intro">
+    <div class="container">
+        <div class="texto" data-aos="fade-right">
+            <h2><span data-translate="hero-greeting">Olá, eu sou</span>   
+                <span class="nome-roxo">
+    <span class="letra" style="animation-delay: 0.3s;">David</span>
+    <span class="letra" style="animation-delay: 0.9s;">Nakahara</span>
+    
+  </>
+</h2>
+            </h2>
+            <h3 data-translate="hero-title">Desenvolvedor Web & Designer UX</h3>
+            <p data-translate="hero-description"><strong>Resolvo problemas complexos de experiência do usuário com soluções focadas em integridade que conectam milhares de pessoas através de designs inovadores e código limpo.</strong></p>
+            
+            <div class="social-icons">
+                <a href="https://www.instagram.com/woo_d4vid/?utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://br.linkedin.com/in/david-nakahara-8a5132320" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Annextt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="foto" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/images/biteca.jpeg" alt="David Nakahara - Desenvolvedor Web e Designer UX" class="avatar" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos">
+    <div class="container">
+        <h2 data-aos="fade-up" data-translate="services-title">Serviços</h2>
+        <ul class="servico-lista">
+            <li data-aos="fade-up" data-aos-delay="100">
+                <div class="cartao">
+                    <i class="fas fa-palette" style="font-size: 3rem; color: #6c5ce7; margin-bottom: 20px;"></i>
+                    <h3 data-translate="service-brand-title">Design de Marca</h3>
+                    <p data-translate="service-brand-desc">Criação de identidade visual completa com soluções criativas e eficazes que fortalecem a presença da sua marca no mercado digital.</p>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+                <div class="cartao">
+                    <i class="fas fa-code" style="font-size: 3rem; color: #6c5ce7; margin-bottom: 20px;"></i>
+                    <h3 data-translate="service-web-title">Desenvolvimento Web</h3>
+                    <p data-translate="service-web-desc">Sites modernos, responsivos e otimizados com foco na performance e experiência do usuário utilizando tecnologias atuais.</p>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+                <div class="cartao">
+                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: #6c5ce7; margin-bottom: 20px;"></i>
+                    <h3 data-translate="service-ui-title">UI/UX Design</h3>
+                    <p data-translate="service-ui-desc">Interfaces intuitivas e agradáveis com foco no usuário, criando experiências memoráveis e conversões efetivas.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- O que eu resolvo -->
+<section id="solucoes">
+    <div class="container">
+        <h2 data-aos="fade-up" data-translate="solutions-title">O que eu resolvo</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-translate="solutions-subtitle" style="text-align: center; max-width: 700px; margin: 0 auto 60px; color: #ccc; font-size: 1.1rem;">
+            Transformo desafios técnicos em soluções elegantes que impactam usuários reais
+        </p>
+        
+        <div class="solucoes-grid">
+            <!-- Problema 1: Performance -->
+            <div class="solucao-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="solucao-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 data-translate="solution-performance-title">Performance & Otimização</h3>
+                <p class="problema" data-translate="solution-performance-problem">Sites lentos afastam usuários e reduzem conversões</p>
+                <ul class="solucao-list">
+                    <li data-translate="solution-performance-1"><i class="fas fa-check"></i> Redução de tempo de carregamento em até 70%</li>
+                    <li data-translate="solution-performance-2"><i class="fas fa-check"></i> Lazy loading e code splitting inteligente</li>
+                    <li data-translate="solution-performance-3"><i class="fas fa-check"></i> Otimização de imagens e recursos</li>
+                    <li data-translate="solution-performance-4"><i class="fas fa-check"></i> Implementação de cache estratégico</li>
+                </ul>
+            </div>
+            
+            <!-- Problema 2: UX -->
+            <div class="solucao-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="solucao-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 data-translate="solution-ux-title">Experiência do Usuário</h3>
+                <p class="problema" data-translate="solution-ux-problem">Interfaces confusas levam à frustração e abandono</p>
+                <ul class="solucao-list">
+                    <li data-translate="solution-ux-1"><i class="fas fa-check"></i> Design centrado no usuário e testes de usabilidade</li>
+                    <li data-translate="solution-ux-2"><i class="fas fa-check"></i> Fluxos intuitivos que aumentam conversão</li>
+                    <li data-translate="solution-ux-3"><i class="fas fa-check"></i> Acessibilidade (WCAG 2.1) para todos os públicos</li>
+                    <li data-translate="solution-ux-4"><i class="fas fa-check"></i> Micro-interações que encantam</li>
+                </ul>
+            </div>
+            
+            <!-- Problema 3: Apps Desktop -->
+            <div class="solucao-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="solucao-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3 data-translate="solution-desktop-title">Aplicações Desktop</h3>
+                <p class="problema" data-translate="solution-desktop-problem">Necessidade de apps nativas multiplataforma</p>
+                <ul class="solucao-list">
+                    <li data-translate="solution-desktop-1"><i class="fas fa-check"></i> Electron apps para Windows, Mac e Linux</li>
+                    <li data-translate="solution-desktop-2"><i class="fas fa-check"></i> Performance nativa com tecnologias web</li>
+                    <li data-translate="solution-desktop-3"><i class="fas fa-check"></i> Integração com APIs e sistemas locais</li>
+                    <li data-translate="solution-desktop-4"><i class="fas fa-check"></i> Auto-update e distribuição simplificada</li>
+                </ul>
+            </div>
+            
+            <!-- Problema 4: Integração -->
+            <div class="solucao-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="solucao-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3 data-translate="solution-api-title">Integração de APIs</h3>
+                <p class="problema" data-translate="solution-api-problem">Sistemas isolados que não conversam entre si</p>
+                <ul class="solucao-list">
+                    <li data-translate="solution-api-1"><i class="fas fa-check"></i> Consumo e criação de APIs RESTful</li>
+                    <li data-translate="solution-api-2"><i class="fas fa-check"></i> Integração com serviços terceiros</li>
+                    <li data-translate="solution-api-3"><i class="fas fa-check"></i> Webhooks e comunicação em tempo real</li>
+                    <li data-translate="solution-api-4"><i class="fas fa-check"></i> Tratamento robusto de erros</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="solucoes-cta" data-aos="fade-up" data-aos-delay="500">
+            <p data-translate="cta-title">Tem um desafio semelhante?</p>
+            <a href="#contato" class="botao botao-lg">
+                <i class="fas fa-comments"></i> <span data-translate="cta-button">Vamos conversar</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Projetos -->
+<section id="projetos">
+    <div class="container">
+        <h2 data-aos="fade-up" data-translate="projects-title">Meus Projetos</h2>
+        <div class="projetos-grid">
+            <div class="projeto" data-aos="fade-up" data-aos-delay="100">
+                <div class="cartao">
+                    <h3>D-Recorder | Screen Recorder</h3>
+                    <a href="https://github.com/Annextt/D-Record" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> <span data-translate="project-link">Ver Projeto</span>
+                    </a>
+                    <p data-translate="project-recorder-desc">Aplicação de gravação de tela desenvolvida com HTML, CSS e JavaScript, focada em simplicidade e performance.</p>
+                    <img src="assets/images/rec.png" alt="Record" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="projeto" data-aos="fade-up" data-aos-delay="200">
+                <div class="cartao">
+                    <h3>D-Sound | Music APP</h3>
+                    <a href="https://dsound.netlify.app" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> <span data-translate="project-link">Ver Projeto</span>
+                    </a>
+                    <p data-translate="project-sound-desc">Reprodutor de música moderno, desenvolvido com HTML, CSS e JavaScript.</p>
+                    <img src="assets/images/sound.png" alt="Screenshot do projeto Pokédex" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades">
+    <div class="container">
+        <h2 data-aos="fade-up" data-translate="skills-title">Habilidades</h2>
+        
+        <div class="skills-icon-grid">
+            <!-- HTML5 -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML5</h3>
+            </div>
+            
+            <!-- CSS3 -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS3</h3>
+            </div>
+            
+            <!-- JavaScript -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+            </div>
+            
+            <!-- React -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h3>React</h3>
+            </div>
+            
+            <!-- Node.js -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <h3>Node.js</h3>
+            </div>
+
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>MongoDB</h3>
+            </div>
+            
+            <!-- Figma -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="skill-icon">
+                    <i class="fab fa-figma"></i>
+                </div>
+                <h3>Figma</h3>
+            </div>
+            
+            <!-- Git -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <h3>Git</h3>
+            </div>
+            
+            <!-- GitHub -->
+            <div class="skill-icon-card" data-aos="fade-up" data-aos-delay="450">
+                <div class="skill-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+            </div>
+        </div>
+    </div>
+
+<!-- Contato -->
+<section id="contato">
+    <div class="container contato">
+        <form 
+            id="contact-form" 
+            name="contato" 
+            method="POST" 
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            data-aos="fade-right"
+        >
+            <h2 data-translate="contact-title">Vamos trabalhar juntos!</h2>
+
+            <div id="form-feedback" class="form-feedback"></div>
+            
+            <!-- Campo honeypot para evitar spam (oculto) -->
+            <input type="hidden" name="form-name" value="contato" />
+            <p style="display: none;">
+                <label>Não preencha este campo: <input name="bot-field" /></label>
+            </p>
+            
+           <input type="text" name="nome" data-translate-placeholder="form-name" placeholder="Nome completo" required aria-label="Nome completo">
+            <input type="email" name="email" data-translate-placeholder="form-email" placeholder="Seu e-mail" required aria-label="Seu e-mail">
+            <input type="text" name="assunto" data-translate-placeholder="form-subject" placeholder="Assunto" required aria-label="Assunto">
+            <textarea name="mensagem" data-translate-placeholder="form-message" placeholder="Sua mensagem" required aria-label="Sua mensagem"></textarea>
+            <button type="submit" id="submit-btn">
+                <i class="fas fa-paper-plane"></i> <span data-translate="form-submit">Enviar Mensagem</span>
+            </button>
+        </form>
+        
+        <div class="infos" data-aos="fade-left">
+            <h3 data-translate="contact-info-title">Informações de Contato</h3>
+            <p><i class="fas fa-phone"></i><strong data-translate="contact-phone">Telefone:</strong> (11) 91085-2415</p>
+            <p><i class="fas fa-envelope"></i><strong>Email:</strong> devdavidnakahara@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i><strong data-translate="contact-location">Localização:</strong> São Paulo - SP</p>
+            <p><i class="fas fa-clock"></i><strong data-translate="contact-availability">Disponibilidade:</strong> <span data-translate="contact-schedule">Segunda a Sexta, 9h às 18h</span></p>
+            
+            <div class="social-icons" style="margin-top: 30px;">
+                <a href="https://www.instagram.com/woo_d4vid/?utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://br.linkedin.com/in/david-nakahara-8a5132320" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Annextt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:devdavidnakahara@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 David Nakahara. <span data-translate="footer-rights">Todos os direitos reservados.</span> | <span data-translate="footer-made">Feito com</span> <i class="fas fa-coffee" style="color: #6c5ce7;"></i> <span data-translate="footer-code">e muito código</span></p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+<script src="Js/rope.js"></script>
+
+
+</body>
+</html>
