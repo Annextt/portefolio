@@ -5,7 +5,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 O portfólio foi pensado como uma vitrine moderna, funcional e intuitiva, unindo design consistente, interatividade e código limpo.
 
 🔗 Acesse o portfólio:
-👉 [https://SEU-SITE.netlify.app](https://portefoliodavid.netlify.app)
+👉 https://portefoliodavid.netlify.app
 
 # 📌 Seções do Portfólio
 
