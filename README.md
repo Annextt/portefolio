@@ -29,10 +29,8 @@ Alternância de Tema (Claro / Escuro)
 Interação visual através de uma lâmpada com cordão, permitindo a troca de tema de forma intuitiva e criativa.
 
 Troca de Idioma (PT / EN)
-Botão para alternar instantaneamente entre português e inglês, tornando o portfólio acessível a um público internacional.
+Botão para alternar instantaneamente entre português e inglês, melhorando a acessibilidade e a experiência para todos os usuários
 
-Design Responsivo
-Layout adaptado para diferentes tamanhos de tela, garantindo boa experiência em desktop e mobile.
 
 # 🛠️ Tecnologias Utilizadas
 
